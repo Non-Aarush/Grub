@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blue Lock Project - A Grub Submission</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .gradient-text {
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glass-nav {
+      backdrop-filter: blur(10px);
+      background: rgba(15, 23, 42, 0.8);
+    }
+    .hero-bg {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+      position: relative;
+    }
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('https://static1.srcdn.com/wordpress/wp-content/uploads/2023/12/blue-lock-manga-cover.jpg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop') center/cover;
+      opacity: 0.3;
+      z-index: 1;
+    }
+    .hero-content { position: relative; z-index: 2; }
+    .character-card {
+      background: rgba(30, 41, 59, 0.9);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+    }
+    .character-image {
+      width: 100%;
+      height: 200px;
+      background: #1e293b;
+      border-radius: 12px;
+      border: 2px dashed rgba(59, 130, 246, 0.3);
+    }
+    .character-image img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+    .scroll-indicator {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 4px;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      z-index: 100;
+      transition: width 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-white">
+
+  <div class="scroll-indicator" id="scrollIndicator"></div>
+
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-slate-700">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold">⚽</span>
+          </div>
+          <h1 class="text-xl font-bold gradient-text">Blue Lock Project</h1>
+        </div>
+        <nav class="hidden md:flex space-x-6">
+          <a href="#home" class="text-slate-300">Home</a>
+          <a href="#characters" class="text-slate-300">Characters</a>
+          <a href="#about" class="text-slate-300">About</a>
+          <a href="#faq" class="text-slate-300">FAQ</a>
+          <a href="#join" class="text-slate-300">Join</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section id="home" class="min-h-screen hero-bg flex items-center justify-center">
+    <div class="hero-content text-center px-4 max-w-4xl mx-auto">
+      <h1 class="text-6xl md:text-8xl font-bold mb-6 gradient-text">
+        BLUE LOCK
+      </h1>
+      <p class="text-xl md:text-2xl text-slate-300 mb-8">
+        Enter the world of Anime Football 
+      </p>
+      <a href="#characters" class="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg">
+        Begin :D
+      </a>
+    </div>
+  </section>
+
+  <section id="characters" class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-bold mb-4 gradient-text">
+          Blue Lock Characters
+        </h2>
+        <p class="text-slate-400 text-lg">
+          Meet the strikers competing for Football's future
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="character-card rounded-lg p-6">
+          <div class="character-image mb-4 flex items-center justify-center">
+            <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/11/Yoichi-in-Blue-Lock.jpg" alt="Isagi Yoichi">
+          </div>
+          <h3 class="text-2xl font-bold mb-2 gradient-text">Isagi Yoichi</h3>
+          <p class="text-slate-400 mb-1">Forward</p>
+          <p class="mb-3 text-slate-300">The protagonist with exceptional spatial awareness and adaptability. Known for his 'direct shot' and ability to evolve under pressure.</p>
+          <p class="text-sm text-blue-300">Goals: 15 | Assists: 8 | Speciality: Meta-Vision</p>
+        </div>
+
+        <div class="character-card rounded-lg p-6">
+          <div class="character-image mb-4 flex items-center justify-center">
+            <img src="https://a.storyblok.com/f/178900/750x422/181ec01b59/13ee2058176f406fcd78106958214ef11645010005_main.jpg/m/filters:quality(95)format(webp)" alt="Bachira Meguru">
+          </div>
+          <h3 class="text-2xl font-bold mb-2 gradient-text">Bachira Meguru</h3>
+          <p class="text-slate-400 mb-1">Forward/Midfielder</p>
+          <p class="mb-3 text-slate-300">A creative dribbler with unpredictable moves. Guided by his inner 'monster' that seeks strong opponents.</p>
+          <p class="text-sm text-blue-300">Goals: 12 | Assists: 14 | Speciality: Dribbling Monster</p>
+        </div>
+
+        <div class="character-card rounded-lg p-6">
+          <div class="character-image mb-4 flex items-center justify-center">
+            <img src="https://motionbgs.com/media/5512/rensuke-kunigami-blue-lock.jpg" alt="Kunigami Rensuke">
+          </div>
+          <h3 class="text-2xl font-bold mb-2 gradient-text">Kunigami Rensuke</h3>
+          <p class="text-slate-400 mb-1">Forward/Midfielder</p>
+          <p class="mb-3 text-slate-300">A powerful striker with incredible shooting ability. Known for his strong moral compass and 'Panther Shot'.</p>
+          <p class="text-sm text-blue-300">Goals: 18 | Assists: 3 | Speciality: Wildcard Buff</p>
+        </div>
+
+        <div class="character-card rounded-lg p-6">
+          <div class="character-image mb-4 flex items-center justify-center">
+            <img src="https://us.oricon-group.com/upimg/detail/1000/1898/img660/bbcacdf920e781aac67ce4b05e6ce61b.jpg" alt="Chigiri Hyoma">
+          </div>
+          <h3 class="text-2xl font-bold mb-2 gradient-text">Chigiri Hyoma</h3>
+          <p class="text-slate-400 mb-1">Winger</p>
+          <p class="mb-3 text-slate-300">Lightning-fast winger who overcame a career-threatening injury. His speed is unmatched when he goes all out.</p>
+          <p class="text-sm text-blue-300">Goals: 9 | Assists: 1 | Speciality: Speed Demon</p>
+        </div>
+
+        <div class="character-card rounded-lg p-6">
+          <div class="character-image mb-4 flex items-center justify-center">
+            <img src="https://cdn.shopify.com/s/files/1/0609/9333/9607/files/e1ac4b3ad01180b05fb0d45b0ffbd420.jpg" alt="Rin Itoshi">
+          </div>
+          <h3 class="text-2xl font-bold mb-2 gradient-text">Rin Itoshi</h3>
+          <p class="text-slate-400 mb-1">Forward</p>
+          <p class="mb-3 text-slate-300">Sae's younger brother with incredible technical skills and a cold, calculating playstyle. Seeks to surpass his brother.</p>
+          <p class="text-sm text-blue-300">Goals: 22 | Assists: 7 | Speciality: Monster Flow</p>
+        </div>
+
+        <div class="character-card rounded-lg p-6">
+          <div class="character-image mb-4 flex items-center justify-center">
+            <img src="https://thefictionalfanatic1.wordpress.com/wp-content/uploads/2023/03/nagi-2910509735-e1679362302540.jpg" alt="Nagi Seishiro">
+          </div>
+          <h3 class="text-2xl font-bold mb-2 gradient-text">Nagi Seishiro</h3>
+          <p class="text-slate-400 mb-1">Forward</p>
+          <p class="mb-3 text-slate-300">A naturally gifted player with incredible ball control and creativity. Started playing football recently but shows immense talent.</p>
+          <p class="text-sm text-blue-300">Goals: 14 | Assists: 5 | Speciality: Genius Talent</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-20 px-4 bg-slate-800">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-5xl font-bold mb-8 gradient-text">
+        About Blue Lock Project
+      </h2>
+      <div class="character-card rounded-lg p-8">
+        <p class="text-lg text-slate-300">
+          Welcome to the ultimate Blue Lock experience. This project is created for Grub Hackclub by Aarush Sharma, a 17 yo High School Student and it's about all the leading strikers from the Blue Lock Anime that has taken the world by storm.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-5xl font-bold text-center mb-16 gradient-text">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-4">
+        <div class="character-card rounded-lg">
+          <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="text-xl font-semibold gradient-text">What is Blue Lock?</span>
+            <span class="text-blue-400 text-2xl">+</span>
+          </button>
+          <div class="faq-answer px-6 pb-5 text-slate-300 hidden">
+            Blue Lock is an anime where young strikers—including Yoichi Isagi, Meguru Bachira, Rensuke Kunigami, and Hyoma Chigiri—enter a ruthless program led by Ego Jinpachi.
+          </div>
+        </div>
+
+        <div class="character-card rounded-lg">
+          <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="text-xl font-semibold gradient-text">How does the Blue Lock system work?</span>
+            <span class="text-blue-400 text-2xl">+</span>
+          </button>
+          <div class="faq-answer px-6 pb-5 text-slate-300 hidden">
+            300 strikers are brought together and compete in various stages. Those who fail are eliminated and banned from representing Japan forever.
+          </div>
+        </div>
+
+        <div class="character-card rounded-lg">
+          <button class="faq-toggle w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="text-xl font-semibold gradient-text">Who created the Blue Lock project?</span>
+            <span class="text-blue-400 text-2xl">+</span>
+          </button>
+          <div class="faq-answer px-6 pb-5 text-slate-300 hidden">
+            Jinpachi Ego created Blue Lock after Japan's failure in the World Cup, believing that Japan needs a world-class striker to compete globally.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="join" class="py-20 px-4 bg-slate-800">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-5xl font-bold text-center mb-8 gradient-text">
+        Join Blue Lock
+      </h2>
+      <p class="text-slate-400 text-center mb-12 text-lg">
+        Think you have what it takes? Submit your application below.
+      </p>
+      <div class="character-card rounded-lg p-8">
+        <form id="joinForm" class="space-y-6">
+          <div>
+            <label for="name" class="block text-sm font-medium text-slate-300 mb-2">
+              Full Name
+            </label>
+            <input type="text" id="name" required class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white" placeholder="Enter your full name" />
+          </div>
+          <div>
+            <label for="character" class="block text-sm font-medium text-slate-300 mb-2">
+              Favorite Character
+            </label>
+            <select id="character" required class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white">
+              <option value="">Select a character</option>
+              <option>Isagi Yoichi</option>
+              <option>Bachira Meguru</option>
+              <option>Kunigami Rensuke</option>
+              <option>Chigiri Hyoma</option>
+              <option>Rin Itoshi</option>
+              <option>Nagi Seishiro</option>
+            </select>
+          </div>
+          <div>
+            <label for="reason" class="block text-sm font-medium text-slate-300 mb-2">
+              Why do you want to join Blue Lock?
+            </label>
+            <textarea id="reason" required rows="4" class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white" placeholder="Tell us about your ambition and what drives you..."></textarea>
+          </div>
+          <button type="submit" class="w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg">
+            Submit Application
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-8 px-4 border-t border-slate-700">
+    <div class="max-w-6xl mx-auto text-center">
+      <p class="text-slate-400">
+        © 2025 ~ Not Affiliated With BlueLock ~ Made for Hackclub
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-toggle').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var answer = btn.nextElementSibling;
+        var plus = btn.querySelector('span:last-child');
+        
+        if (answer.classList.contains('hidden')) {
+          answer.classList.remove('hidden');
+          plus.textContent = '-';
+        } else {
+          answer.classList.add('hidden');
+          plus.textContent = '+';
+        }
+      });
+    });
+
+    document.getElementById('joinForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Application submitted! Good luck becoming the next Blue Lock striker!');
+      this.reset();
+    });
+
+    window.addEventListener('scroll', function() {
+      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById('scrollIndicator').style.width = scrollPercent + '%';
+    });
+  </script>
+</body>
+</html>
