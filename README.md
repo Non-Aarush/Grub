@@ -10,6 +10,6 @@ Welcome to **GrubLock** - this is a fan website of Anime Blue Lock created for G
 - Responsive layout optimized for desktop and mobile devices  
 - Interactive **floating cards** that show info when clicked
 - A Scrollbar Indicator 
-- Animated background
 - Stylish **Submit Application** section 
 
+D: Grub pls pls i am hungry 
