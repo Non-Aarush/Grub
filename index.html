@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrubLock</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .bc 
+    {
+      color: #60a5fa;
+    }
+    .sb 
+    {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: #60a5fa;
+      z-index: 999;
+    }
+    .hbg 
+    {
+      background-image: url('https://static1.srcdn.com/wordpress/wp-content/uploads/2023/12/blue-lock-manga-cover.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+    .hbg::before 
+    {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(17, 24, 39, 0.6);
+      z-index: 1;
+    }
+    .hc 
+    {
+      position: relative;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+  <div class="sb" id="bar"></div>
+
+  <header class="bg-gray-800 p-4 fixed w-full top-0 z-50">
+    <div class="flex justify-between items-center max-w-6xl mx-auto">
+      <h1 class="text-xl md:text-2xl font-bold bc">GrubLock :O</h1>
+      <nav class="hidden md:flex space-x-4">
+        <a href="#home" class="text-gray-300 hover:text-white">Home</a>
+        <a href="#chars" class="text-gray-300 hover:text-white">Players</a>
+        <a href="#about" class="text-gray-300 hover:text-white">About</a>
+        <a href="#faq" class="text-gray-300 hover:text-white">FAQ</a>
+        <a href="#join" class="text-gray-300 hover:text-white">Join</a>
+      </nav>
+      <div class="md:hidden">
+        <button class="text-gray-300">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section id="home" class="min-h-screen hbg flex items-center justify-center pt-16">
+    <div class="hc text-center px-4">
+      <h1 class="text-4xl md:text-6xl lg:text-8xl font-bold mb-6 bc">
+        GRUB-LOCK
+      </h1>
+      <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8">
+        Where Grub meets BlueLock
+      </p>
+      <a href="#chars" class="bg-blue-500 text-white px-6 md:px-8 py-3 md:py-4 rounded font-bold text-base md:text-lg">
+        Begin :D
+      </a>
+    </div>
+  </section>
+
+  <section id="chars" class="py-12 md:py-20 px-4 bg-gray-900">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bc">
+          Here are the players
+        </h2>
+        <p class="text-gray-400 text-base md:text-lg">
+          World's best egoist footballers 
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div class="bg-gray-800 rounded-lg p-4 md:p-6 border border-gray-700 cursor-pointer" onclick="sw(this)">
+          <div class="w-full h-40 md:h-48 bg-gray-700 rounded mb-4 flex items-center justify-center">
+            <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/11/Yoichi-in-Blue-Lock.jpg" alt="Isagi" class="w-full h-full object-cover rounded">
+          </div>
+          <h3 class="text-xl md:text-2xl font-bold mb-2 bc">Isagi Yoichi</h3>
+          <div class="hidden" id="if1">
+            <p class="text-gray-400">Position: Forward</p>
+            <p class="text-gray-400">The Main Lead , bro has metavision powers can can break into puzzles</p>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg p-4 md:p-6 border border-gray-700 cursor-pointer" onclick="sw(this)">
+          <div class="w-full h-40 md:h-48 bg-gray-700 rounded mb-4 flex items-center justify-center">
+            <img src="https://a.storyblok.com/f/178900/750x422/181ec01b59/13ee2058176f406fcd78106958214ef11645010005_main.jpg" alt="Bachira" class="w-full h-full object-cover rounded">
+          </div>
+          <h3 class="text-xl md:text-2xl font-bold mb-2 bc">Bachira Meguru</h3>
+          <div class="hidden" id="if2">
+            <p class="text-gray-400">Position: Forward/Midfielder</p>
+            <p class="text-gray-400">The dribbling guy who summons an imaginary monster to play with him</p>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg p-4 md:p-6 border border-gray-700 cursor-pointer" onclick="sw(this)">
+          <div class="w-full h-40 md:h-48 bg-gray-700 rounded mb-4 flex items-center justify-center">
+            <img src="https://motionbgs.com/media/5512/rensuke-kunigami-blue-lock.jpg" alt="Kunigami" class="w-full h-full object-cover rounded">
+          </div>
+          <h3 class="text-xl md:text-2xl font-bold mb-2 bc">Kunigami Rensuke</h3>
+          <div class="hidden" id="if3">
+            <p class="text-gray-400">Position: Forward</p>
+            <p class="text-gray-400">The good guy who got rejected and returns as wildcard</p>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg p-4 md:p-6 border border-gray-700 cursor-pointer" onclick="sw(this)">
+          <div class="w-full h-40 md:h-48 bg-gray-700 rounded mb-4 flex items-center justify-center">
+            <img src="https://us.oricon-group.com/upimg/detail/1000/1898/img660/bbcacdf920e781aac67ce4b05e6ce61b.jpg" alt="Chigiri" class="w-full h-full object-cover rounded">
+          </div>
+          <h3 class="text-xl md:text-2xl font-bold mb-2 bc">Chigiri Hyoma</h3>
+          <div class="hidden" id="if4">
+            <p class="text-gray-400">Position: Winger</p>
+            <p class="text-gray-400">The fastest guy who has a knee injury but still runs faster than the whole cast</p>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg p-4 md:p-6 border border-gray-700 cursor-pointer" onclick="sw(this)">
+          <div class="w-full h-40 md:h-48 bg-gray-700 rounded mb-4 flex items-center justify-center">
+            <img src="https://cdn.shopify.com/s/files/1/0609/9333/9607/files/e1ac4b3ad01180b05fb0d45b0ffbd420.jpg" alt="Rin" class="w-full h-full object-cover rounded">
+          </div>
+          <h3 class="text-xl md:text-2xl font-bold mb-2 bc">Rin Itoshi</h3>
+          <div class="hidden" id="if5">
+            <p class="text-gray-400">Position: Forward</p>
+            <p class="text-gray-400">The younger brother of famous footballer seeking revenge</p>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg p-4 md:p-6 border border-gray-700 cursor-pointer" onclick="sw(this)">
+          <div class="w-full h-40 md:h-48 bg-gray-700 rounded mb-4 flex items-center justify-center">
+            <img src="https://thefictionalfanatic1.wordpress.com/wp-content/uploads/2023/03/nagi-2910509735-e1679362302540.jpg" alt="Nagi" class="w-full h-full object-cover rounded">
+          </div>
+          <h3 class="text-xl md:text-2xl font-bold mb-2 bc">Nagi Seishiro</h3>
+          <div class="hidden" id="if6">
+            <p class="text-gray-400">Position: Forward</p>
+            <p class="text-gray-400">The lazy guy who is a genius at playing due to his talent</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-12 md:py-20 px-4 bg-gray-900">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 bc">
+        About Me
+      </h2>
+      <div class="bg-gray-800 rounded-lg p-6 md:p-8 border border-gray-700">
+        <p class="text-base md:text-lg text-gray-300">
+          I am Aarush Sharma , a 17 y/o . I have been watching anime since i was in 5th standard and well i made this website so that more people can learn about the amazing football anime , BlueLock, everyone here is fighting to become the best strikers its not like other sports anime which makes it fun, also why is everyone aiming to be an egoist 😭😭😭😭.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="py-12 md:py-20 px-4 bg-gray-900">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16 bc">
+        Frequently Asked Questions
+      </h2>
+      <div class="space-y-4">
+        <div class="bg-gray-800 rounded-lg border border-gray-700">
+          <button class="w-full flex justify-between items-center px-4 md:px-6 py-4 md:py-5 text-left" onclick="tg(this)">
+            <span class="text-lg md:text-xl font-bold bc">What is Blue Lock?</span>
+            <span class="text-blue-400 text-2xl">+</span>
+          </button>
+          <div class="px-4 md:px-6 pb-4 md:pb-5 text-gray-300 hidden">
+            BlueLock is a sports anime about a training facility where "egoists" are produced as strikers so that they can become the #1 striker in the world and make japan win the world cup 😭
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg border border-gray-700">
+          <button class="w-full flex justify-between items-center px-4 md:px-6 py-4 md:py-5 text-left" onclick="tg(this)">
+            <span class="text-lg md:text-xl font-bold bc">Should i watch the anime?</span>
+            <span class="text-blue-400 text-2xl">+</span>
+          </button>
+          <div class="px-4 md:px-6 pb-4 md:pb-5 text-gray-300 hidden">
+            Yeah you should try it out but the manga is way better so after season 1 , read the manga pls 
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg border border-gray-700">
+          <button class="w-full flex justify-between items-center px-4 md:px-6 py-4 md:py-5 text-left" onclick="tg(this)">
+            <span class="text-lg md:text-xl font-bold bc">Who is this Ego guy?</span>
+            <span class="text-blue-400 text-2xl">+</span>
+          </button>
+          <div class="px-4 md:px-6 pb-4 md:pb-5 text-gray-300 hidden">
+            Ego jinpanchi is the founder of BlueLock , bro thinks he can make everyone egoist and play with a team made entirely of strikers 😭😭 
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="join" class="py-12 md:py-20 px-4 bg-gray-900">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6 md:mb-8 bc">
+        Join Ego and his masterplan
+      </h2>
+      <p class="text-gray-400 text-center mb-8 md:mb-12 text-base md:text-lg">
+        What character will you like to be?
+      </p>
+      <div class="bg-gray-800 rounded-lg p-4 md:p-6 border border-gray-700">
+        <form id="fm" class="space-y-4">
+          <div>
+            <label for="nm" class="block text-sm font-bold text-gray-300 mb-1">
+              Enter your name blud
+            </label>
+            <input type="text" id="nm" required class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white" placeholder="Enter anything tbh 😭" />
+          </div>
+          <div>
+            <label for="ch" class="block text-sm font-bold text-gray-300 mb-1">
+              Your fav?
+            </label>
+            <select id="ch" required class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white">
+              <option value="">Hehe Select One</option>
+              <option>Isagi Yoichi</option>
+              <option>Bachira Meguru</option>
+              <option>Kunigami Rensuke</option>
+              <option>Chigiri Hyoma</option>
+              <option>Rin Itoshi</option>
+              <option>Nagi Seishiro</option>
+            </select>
+          </div>
+          <div>
+            <label for="rs" class="block text-sm font-bold text-gray-300 mb-1">
+              Why him?
+            </label>
+            <textarea id="rs" required rows="3" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white" placeholder="Yes,Yes tell me"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-blue-500 text-white px-6 py-3 rounded font-bold">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-4 px-4 border-t border-gray-700 bg-gray-900">
+    <div class="max-w-6xl mx-auto text-center">
+      <p class="text-gray-400 text-sm">
+        Made for Hackclub ~ Aarush was here :O ~ I am watching 
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    function sw(el) 
+    {
+      var dt = el.querySelector('div[id^="if"]');
+      if (dt.classList.contains('hidden')) 
+      {
+        dt.classList.remove('hidden');
+      } else 
+      {
+        dt.classList.add('hidden');
+      }
+    }
+
+    function tg(bt) {
+      var aw = bt.nextElementSibling;
+      var ps = bt.querySelector('span:last-child');
+      
+      if (aw.classList.contains('hidden')) 
+      {
+        aw.classList.remove('hidden');
+        ps.textContent = '-';
+      } else 
+      {
+        aw.classList.add('hidden');
+        ps.textContent = '+';
+      }
+    }
+
+    document.getElementById('fm').addEventListener('submit', function(ev) 
+    {
+      ev.preventDefault();
+      alert('Application submitted!');
+      this.reset();
+    });
+
+    window.addEventListener('scroll', function() 
+    {
+      var st = document.documentElement.scrollTop;
+      var ht = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var pg = (st / ht) * 100;
+      document.getElementById('bar').style.width = pg + '%';
+    });
+  </script>
+</body>
+</html>
