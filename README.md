@@ -1,15 +1,18 @@
 # BlueLock Grub
-
 Welcome to **GrubLock** - this is a fan website of Anime Blue Lock created for Grub , Hackclub. 
 
----
+## Features
 
-## 🚀 Features
-
-- **Sleek frontend** built with **HTML** and **Tailwind CSS** — no backend required!  
-- Responsive layout optimized for desktop and mobile devices  
-- Interactive **floating cards** that show info when clicked
+- Built with **HTML** and **Tailwind CSS** 
+- Cards that show info when clicked
 - A Scrollbar Indicator 
-- Stylish **Submit Application** section 
+- Stylish Character selection section
+- A Footer
+- A Navbar
+- A FAQ section
+- A HTML button , that works
+- A hover colour change for navbar
+- About me section using container
+
 
 D: Grub pls pls i am hungry 
